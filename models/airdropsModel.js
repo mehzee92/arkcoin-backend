@@ -92,6 +92,19 @@ async createAirdrop(data)
 
 
 
+async deleteAirdrop(id) {
+    try {
+        const sql = `DELETE FROM airdrops WHERE id = ?`;
+        const [result] = await pool.query(sql, [id]);
+        return result.affectedRows > 0;
+    } 
+    catch (error) 
+    {
+        return 0;
+    }
+},
+
+
   async addUpAirdrop(data) 
   {
       const values = [data.amount, data.wallet];

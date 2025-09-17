@@ -54,6 +54,22 @@ router.post('/new', async (req, res) => {
 });
 
 
+
+//  /api/airdrops/delete
+router.post('/delete', async (req, res) => {
+    try {
+      const result = await airdropsModel.deleteAirdrop(req.body.id);
+      res.json({success:true, ...result, ...req.body});
+    } 
+    catch (err) 
+    {
+      console.log(err);
+      res.json({success:false, message:err.message})
+    }    
+});
+
+
+
 // Create new airdrop entry
 router.post('/add-up', async (req, res) => {
   const airdrops = req.body.airdrops;
