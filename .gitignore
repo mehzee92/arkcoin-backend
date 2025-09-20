@@ -12,9 +12,6 @@ logs/
 *.err
 
 # Environment variables
-.env
-.env.test
-.env.production
 
 # Build output
 dist/
@@ -48,3 +45,7 @@ Thumbs.db
 
 # Misc
 *.tgz
+config.bat
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
