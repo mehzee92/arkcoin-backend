@@ -4,7 +4,7 @@
   "description": "BaseHaven",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node api.js && nodemon index.js"
   },
   "author": "mehzee92",
   "license": "ISC",
